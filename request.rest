@@ -38,5 +38,16 @@ Content-Type: application/json
     }
 
 
+###
+# Delete pessoa
+DELETE http://localhost:3000/pessoas/2
   
 
+###
+# GetAll endereços
+GET http://localhost:3000/enderecos
+
+
+###
+# Get endereço by Id
+GET http://localhost:3000/enderecos/1
