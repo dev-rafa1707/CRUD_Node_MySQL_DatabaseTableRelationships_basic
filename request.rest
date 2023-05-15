@@ -1,19 +1,31 @@
 
-# GetAll the pessoas
+# GetAll pessoas
 GET http://localhost:3000/pessoas
 
 ###
 
-# Create a pessoa
+# Get Pesssoa by Id
+GET http://localhost:3000/pessoas/1
+
+
+
+
+
+
+###
+# Create pessoa
 POST http://localhost:3000/pessoas
 Content-Type: application/json
 
     {
-        "nome":"Ana Giseli",
+        "nome":"Francieli de Almeida",
         "endereco":{
-            "rua": "Rua das Flores",
-            "cidade": "Slo" 
+            "rua": "Rua Porto Alegre",
+            "cidade": "Curitiba" 
         }
     }
+
+
+
   
 
