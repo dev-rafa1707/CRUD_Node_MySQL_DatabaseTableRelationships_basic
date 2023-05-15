@@ -4,14 +4,14 @@ const Endereco = require("../models/endereco")
 const controller = {}
 
 controller.getAll = async (req, res) => {
-    // try{
-    //     const pessoas = await Pessoa.findAll({
-    //         include: Endereco
-    //     })
-    //     res.status(200).json(pessoas)
-    // }catch(error){
-    //     res.status(500).json(error)
-    // }
+    try{
+        const enderecos = await Endereco.findAll({
+            include: Pessoa
+        })
+        res.status(200).json(enderecos)
+    }catch(error){
+        res.status(500).json(error)
+    }
 }
 
 controller.getById = async (req, res) => {

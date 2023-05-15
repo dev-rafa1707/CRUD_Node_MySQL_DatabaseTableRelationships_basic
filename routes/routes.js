@@ -17,4 +17,6 @@ routes.post("/pessoas",PessoaController.create)
 routes.put("/pessoas/:pessoaId",PessoaController.update)
 routes.delete("/pessoas/:pessoaId",PessoaController.delete)
 
+routes.get("/enderecos", EnderecoController.getAll)
+
 module.exports = routes
