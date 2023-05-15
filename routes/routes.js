@@ -1,7 +1,7 @@
 const express = require("express")
 const ProductController = require("../controllers/ProductController")
 const PessoaController = require("../controllers/PessoaController")
-// const EnderecoController = require("../controllers/EnderecoController")
+const EnderecoController = require("../controllers/EnderecoController")
 
 const routes = express.Router()
 
