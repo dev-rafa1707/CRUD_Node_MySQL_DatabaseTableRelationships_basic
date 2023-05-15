@@ -35,14 +35,19 @@ controller.getById = async (req, res) => {
 
 controller.update = async (req, res) => {
     // const {pessoaId} = req.params
-    // const {nome} = req.body
+    // const {endereco} = req.body
     // const {rua,cidade} = req.body.endereco
-    // try{
-    //     const pessoa = await Pessoa.findByPk(pessoaId)
 
-    //     if (!pessoa){
-    //         res.status(422).send("Pessoa não existe!")
+    // try{
+    //     const endereco = await Endereco.findByPk(pessoaId)
+
+    //     if (!endereco){
+    //         res.status(422).send("Endereço não existe!")
     //     }
+
+
+
+
 
     //     pessoa.nome = nome
     //     await pessoa.save()

@@ -51,3 +51,16 @@ GET http://localhost:3000/enderecos
 ###
 # Get endereço by Id
 GET http://localhost:3000/enderecos/1
+
+
+###
+# Update endereço
+PUT http://localhost:3000/enderecos/1
+Content-Type: application/json
+
+    {
+        "endereco":{
+            "rua": "Rua das Hortências",
+            "cidade": "VG" 
+        }
+    }
