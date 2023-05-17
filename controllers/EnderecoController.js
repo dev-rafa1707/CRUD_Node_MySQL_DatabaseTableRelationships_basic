@@ -33,44 +33,7 @@ controller.getById = async (req, res) => {
 }
 
 
-controller.update = async (req, res) => {
-    // const {pessoaId} = req.params
-    // const {endereco} = req.body
-    // const {rua,cidade} = req.body.endereco
 
-    // try{
-    //     const endereco = await Endereco.findByPk(pessoaId)
-
-    //     if (!endereco){
-    //         res.status(422).send("Endereço não existe!")
-    //     }
-
-
-
-
-
-    //     pessoa.nome = nome
-    //     await pessoa.save()
-
-    //     const endereco = await Endereco.findOne({
-    //         where:{
-    //             pessoaId : pessoaId
-    //         }
-    //     })
-
-    //     if (!endereco){
-    //         res.status(422).send("Endereço não existe!")
-    //     }
-
-    //     endereco.rua = rua
-    //     endereco.cidade = cidade
-    //     await endereco.save()
-
-    //     res.status(200).json(pessoa)
-    // }catch (error){
-    //     res.status(422).send("Ocorreu um erro ao atualizar a pessoa. " + error)
-    // }
-}
 
 
 
