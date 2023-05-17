@@ -16,7 +16,23 @@ controller.getAll = async (req, res) => {
 }
 
 controller.getById = async (req, res) => {
-    
+
+    const {pessoaId} = req.params
+    const {pedidoId} = req.params
+
+    try {
+        const pedido = await Pedido.findByPk(pedidoId, {
+            include: Pessoa,
+        })
+
+        if (!pedido){
+            res.status(422).send("Pedido não existe!")
+        }
+        
+        res.status(200).json(pedido)
+    }catch(error){
+        res.status(422).json("Ocorreu um erro ao buscar o pedido. " + error)
+    }
 }
 
 controller.create = async (req, res) => {
