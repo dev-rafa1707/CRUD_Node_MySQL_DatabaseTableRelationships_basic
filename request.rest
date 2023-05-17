@@ -6,7 +6,7 @@ GET http://localhost:3000/pessoas
 
 
 # Get Pesssoa by Id
-GET http://localhost:3000/pessoas/2
+GET http://localhost:3000/pessoas/3
 
 
 ###
@@ -26,7 +26,7 @@ Content-Type: application/json
 
 ###
 # Update pessoa
-PUT http://localhost:3000/pessoas/2
+PUT http://localhost:3000/pessoas/3
 Content-Type: application/json
 
     {
@@ -54,13 +54,3 @@ GET http://localhost:3000/enderecos/1
 
 
 ###
-# Update endereço
-PUT http://localhost:3000/enderecos/1
-Content-Type: application/json
-
-    {
-        "endereco":{
-            "rua": "Rua das Hortências",
-            "cidade": "VG" 
-        }
-    }
