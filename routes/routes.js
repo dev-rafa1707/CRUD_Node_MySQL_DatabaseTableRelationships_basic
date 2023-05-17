@@ -2,6 +2,7 @@ const express = require("express")
 const ProductController = require("../controllers/ProductController")
 const PessoaController = require("../controllers/PessoaController")
 const EnderecoController = require("../controllers/EnderecoController")
+const PedidoController = require("../controllers/PedidoController")
 
 const routes = express.Router()
 
@@ -19,5 +20,11 @@ routes.delete("/pessoas/:pessoaId",PessoaController.delete)
 
 routes.get("/enderecos", EnderecoController.getAll)
 routes.get("/enderecos/:pessoaId", EnderecoController.getById)
+
+routes.get("/pedidos/:pessoaId",PedidoController.getAll)
+routes.get("/pedidos/:pessoaId/:pedidoId",PedidoController.getById) // criar esse conteúdo
+routes.post("/pedidos/:pessoaId",PedidoController.create)
+//routes.put("/pedidos/:pessoaId/:pedidoId",PedidoController.update)
+routes.delete("/pedidos/:pessoaId/:pedidoId",PedidoController.delete)
 
 module.exports = routes
