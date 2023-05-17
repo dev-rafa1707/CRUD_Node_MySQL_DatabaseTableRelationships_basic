@@ -19,6 +19,5 @@ routes.delete("/pessoas/:pessoaId",PessoaController.delete)
 
 routes.get("/enderecos", EnderecoController.getAll)
 routes.get("/enderecos/:pessoaId", EnderecoController.getById)
-routes.put("/enderecos/:pessoaId",PessoaController.update)
 
 module.exports = routes
