@@ -75,3 +75,31 @@ Content-Type: application/json
         "descricao":"Saia",
         "preco":59
     }
+
+
+
+###
+# GetAll pedidos (do cliente)
+GET http://localhost:3000/pedidos/1
+
+###
+
+###
+## essa rota está vazia conteúdo necessita ser criado
+# Get pedido by id (do cliente)
+GET http://localhost:3000/pedidos/1/1
+
+###
+
+
+###
+# Create pedido
+POST http://localhost:3000/pedidos/1
+Content-Type: application/json
+
+    {
+        "valor":0,
+        "produtosIds":[1,2]
+    }
+
+###
