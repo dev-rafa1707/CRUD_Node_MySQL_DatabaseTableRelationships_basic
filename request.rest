@@ -53,4 +53,25 @@ GET http://localhost:3000/enderecos
 GET http://localhost:3000/enderecos/1
 
 
+
 ###
+###
+# GetAll produtos
+GET http://localhost:3000/produtos
+
+###
+
+
+# Get Produtos by Id
+GET http://localhost:3000/produtos/1
+
+
+###
+# Create produto
+POST http://localhost:3000/produtos
+Content-Type: application/json
+
+    {
+        "descricao":"Saia",
+        "preco":59
+    }
