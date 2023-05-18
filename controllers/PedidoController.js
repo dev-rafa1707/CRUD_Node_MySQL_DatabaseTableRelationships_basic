@@ -21,13 +21,19 @@ controller.getById = async (req, res) => {
     const {pedidoId} = req.params
 
     try {
+        const pessoa = await Pessoa.findByPk(pessoaId)
         const pedido = await Pedido.findByPk(pedidoId, {
             include: Pessoa,
         })
 
-        if (!pedido){
+        console.log(pedido)
+        console.log(pessoa)
+
+        
+        if (pessoa.id != pedido.pessoaId){
             res.status(422).send("Pedido não existe!")
         }
+
         
         res.status(200).json(pedido)
     }catch(error){
