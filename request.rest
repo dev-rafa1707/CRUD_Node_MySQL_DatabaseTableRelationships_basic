@@ -87,6 +87,7 @@ GET http://localhost:3000/pedidos
 
 ###
 # GetAll pedidos (do cliente específico)
+#Recupera todos os pedidos do cliente indicado
 GET http://localhost:3000/pedidos/3
 ###
 
