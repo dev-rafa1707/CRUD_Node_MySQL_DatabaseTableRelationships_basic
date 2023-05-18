@@ -80,6 +80,7 @@ Content-Type: application/json
 
 ###
 # GetAll pedidos (todos os pedidos da base de dados)
+# Recupera todos os pedidos cadastrados no banco de dados
 GET http://localhost:3000/pedidos
 ###
 
