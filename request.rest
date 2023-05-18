@@ -72,34 +72,40 @@ POST http://localhost:3000/produtos
 Content-Type: application/json
 
     {
-        "descricao":"Saia",
-        "preco":59
+        "descricao":"Bolsa",
+        "preco":100
     }
 
 
 
 ###
-# GetAll pedidos (do cliente)
+# GetAll pedidos (todos os pedidos da base de dados)
+GET http://localhost:3000/pedidos
+###
+
+
+###
+# GetAll pedidos (do cliente específico)
 GET http://localhost:3000/pedidos/1
-
 ###
 
+
+
 ###
-## essa rota está vazia conteúdo necessita ser criado
 # Get pedido by id (do cliente)
-GET http://localhost:3000/pedidos/1/1
+GET http://localhost:3000/pedidos/1/5
 
 ###
 
 
 ###
 # Create pedido
-POST http://localhost:3000/pedidos/1
+POST http://localhost:3000/pedidos/3
 Content-Type: application/json
 
     {
         "valor":0,
-        "produtosIds":[1,2]
+        "produtosIds":[1,4]
     }
 
 ###

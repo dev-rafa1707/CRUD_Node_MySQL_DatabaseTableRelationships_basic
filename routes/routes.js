@@ -21,8 +21,9 @@ routes.delete("/pessoas/:pessoaId",PessoaController.delete)
 routes.get("/enderecos", EnderecoController.getAll)
 routes.get("/enderecos/:pessoaId", EnderecoController.getById)
 
-routes.get("/pedidos/:pessoaId",PedidoController.getAll)
-routes.get("/pedidos/:pessoaId/:pedidoId",PedidoController.getById) // criar esse conteúdo
+routes.get("/pedidos/",PedidoController.getAll)
+routes.get("/pedidos/:pessoaId",PedidoController.getAllClient)
+routes.get("/pedidos/:pessoaId/:pedidoId",PedidoController.getById)
 routes.post("/pedidos/:pessoaId",PedidoController.create)
 //routes.put("/pedidos/:pessoaId/:pedidoId",PedidoController.update)
 routes.delete("/pedidos/:pessoaId/:pedidoId",PedidoController.delete)

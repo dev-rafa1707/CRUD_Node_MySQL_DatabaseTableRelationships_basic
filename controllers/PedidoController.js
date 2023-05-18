@@ -15,6 +15,24 @@ controller.getAll = async (req, res) => {
     }
 }
 
+controller.getAllClient = async (req, res) => {
+    
+    const {pessoaId} = req.params
+
+    try{
+        const pessoa = await Pessoa.findByPk(pessoaId)
+        const pedidos = await Pedido.findAll()
+
+        for (pedido of pedidos) {
+            console.log(pedido)
+        } 
+    }catch(error){
+
+    }
+}
+
+
+
 controller.getById = async (req, res) => {
 
     const {pessoaId} = req.params
