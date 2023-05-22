@@ -3,7 +3,9 @@ const controller = {}
 
 controller.getAll = async (req, res) => {
     try{
-        const products = await Product.findAll()
+        const products = await Product.findAll({
+            // include: Cor
+        })
         res.status(200).json(products)
     }catch(error){
         res.status(500).json(error)
