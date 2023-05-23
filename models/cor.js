@@ -1,7 +1,7 @@
 const DataTypes = require("sequelize");
 const db = require("../config/dbconnection")
 
-const Produto = db.define('cor', {
+const Cor = db.define('cor', {
     idCor: {
         type: DataTypes.INTEGER,
         autoIncrement: true,
@@ -15,12 +15,12 @@ const Produto = db.define('cor', {
 
 (async () => {
     try {
-        await Produto.sync(); //{ force: true }
-        console.log('Tabela de Produto criada com sucesso.');
+        await Cor.sync(); //{ force: true }
+        console.log('Tabela de Cor criada com sucesso.');
 
     } catch (error) { 
         console.error('Não foi possível conectar-se ao banco de dados:', error);
     }
 })();
 
-module.exports = Produto
+module.exports = Cor
