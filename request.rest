@@ -6,7 +6,7 @@ GET http://localhost:3000/pessoas
 
 
 # Get Pesssoa by Id
-GET http://localhost:3000/pessoas/3
+GET http://localhost:3000/pessoas/2
 
 
 ###
@@ -89,14 +89,16 @@ GET http://localhost:3000/pedidos
 ###
 # GetAll pedidos (do cliente específico)
 #Recupera todos os pedidos do cliente indicado
-GET http://localhost:3000/pedidos/3
+#Sistema está fazendo a busca do cliente e dos pedidos mas não retorna
+# fica 'waiting' 
+GET http://localhost:3000/pedidos/1
 ###
 
 
 
 ###
 # Get pedido by id (do cliente)
-GET http://localhost:3000/pedidos/1/5
+GET http://localhost:3000/pedidos/3/7
 
 ###
 
@@ -108,7 +110,7 @@ Content-Type: application/json
 
     {
         "valor":0,
-        "produtosIds":[1,4]
+        "produtosIds":[6]
     }
 
 ###

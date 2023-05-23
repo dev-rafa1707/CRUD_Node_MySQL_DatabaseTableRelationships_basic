@@ -15,9 +15,28 @@ controller.getAll = async (req, res) => {
     }
 }
 
+// controller.getAllClient = async (req, res) => {
+    
+//     const {pessoaId} = req.params
+
+//     try{
+//         const pessoa = await Pessoa.findByPk(pessoaId)
+//         const pedidos = await Pedido.findAll()
+
+//         for (pedido of pedidos) {
+//             console.log(pedido)
+//         } 
+//     }catch(error){
+
+//     }
+// }
+
 controller.getAllClient = async (req, res) => {
     
     const {pessoaId} = req.params
+    const pedidosCliente = {}
+
+    console.log(pessoaId)
 
     try{
         const pessoa = await Pessoa.findByPk(pessoaId)
@@ -25,7 +44,10 @@ controller.getAllClient = async (req, res) => {
 
         for (pedido of pedidos) {
             console.log(pedido)
-        } 
+            if (pedido.pessoaId === pessoa.id) {
+                pedidosCliente.push(pedido)
+            }
+        }res.status(200).json(pedidosCliente) 
     }catch(error){
 
     }
