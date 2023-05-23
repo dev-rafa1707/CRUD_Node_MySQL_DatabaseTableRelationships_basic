@@ -73,7 +73,8 @@ Content-Type: application/json
 
     {
         "descricao":"Oculos",
-        "preco":100
+        "preco":100,
+        "coresIds":[2,3]
     }
 
 

@@ -1,10 +1,11 @@
 const Product = require('../models/product');
 const controller = {}
+const Cor = require("../models/cor")
 
 controller.getAll = async (req, res) => {
     try{
         const products = await Product.findAll({
-            // include: Cor
+            include: Cor
         })
         res.status(200).json(products)
     }catch(error){
@@ -27,16 +28,30 @@ controller.getById = async (req, res) => {
     }
 }
 
+// controller.create = async (req, res) => {
+//     let {descricao,preco} = req.body
+
+//     try{
+//         const produto = await Product.create({descricao,preco})
+//         res.status(200).json(produto)
+//     }catch(error){ 
+//         res.status(422).send("Ocorreu um erro ao cadastrar o item. " + error)
+//     }
+// }
+
 controller.create = async (req, res) => {
-    let {descricao,preco} = req.body
+    let {descricao,preco, coresIds} = req.body
+    let produto = {}
+    // const coresBD = await Cor.findAll()
 
     try{
-        const produto = await Product.create({descricao,preco})
+        const cores = await Cor.findAll({ where: { idCor: coresIds } });
+        produto = await Product.create({descricao,preco})
+        await produto.addCors(cores);
         res.status(200).json(produto)
     }catch(error){ 
         res.status(422).send("Ocorreu um erro ao cadastrar o item. " + error)
     }
-
 }
 
 controller.update = async (req, res) => {
