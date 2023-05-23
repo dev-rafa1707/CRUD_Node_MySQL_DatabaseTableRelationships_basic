@@ -20,4 +20,4 @@ Cor.belongsToMany(Produto,{through:"corProduto", onDelete:"CASCADE"})
 
 db.sync() 
 
-module.exports = {Pessoa, Endereco, Pedido, Produto}
+module.exports = {Pessoa, Endereco, Pedido, Produto, Cor}
