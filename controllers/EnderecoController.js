@@ -23,7 +23,7 @@ controller.getById = async (req, res) => {
         })
         
         if (!endereco){
-            res.status(422).send("Endereço não existe!")
+            return res.status(404).json({ message: 'Endereço não existe'});
         }
 
         res.status(200).json(endereco)
