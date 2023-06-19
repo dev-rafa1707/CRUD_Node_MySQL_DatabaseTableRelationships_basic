@@ -30,7 +30,7 @@ PUT http://localhost:3000/pessoas/3
 Content-Type: application/json
 
     {
-        "nome":"Fran de Almeida",
+        "nome":"Francieli de Almeida",
         "endereco":{
             "rua": "Rua Curitiba",
             "cidade": "PoA" 
