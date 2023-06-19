@@ -23,7 +23,7 @@ controller.getById = async (req, res) => {
         })
         
         if (!pessoa){
-            res.status(422).send("Pessoa não existe!")
+            return res.status(404).json({ message: 'Client not found'});
         }
 
         res.status(200).json(pessoa)
