@@ -15,10 +15,10 @@ POST http://localhost:3000/pessoas
 Content-Type: application/json
 
     {
-        "nome":"Francieli de Almeida",
+        "nome":"Michelly da Silva",
         "endereco":{
-            "rua": "Rua Porto Alegre",
-            "cidade": "Curitiba" 
+            "rua": "Rua dos Trabalhadores",
+            "cidade": "Blumenau" 
         }
     }
 
