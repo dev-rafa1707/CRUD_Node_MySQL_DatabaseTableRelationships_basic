@@ -91,14 +91,14 @@ GET http://localhost:3000/pedidos
 #Recupera todos os pedidos do cliente indicado
 #Sistema está fazendo a busca do cliente e dos pedidos mas não retorna
 # fica 'waiting' 
-GET http://localhost:3000/pedidos/3
+GET http://localhost:3000/pedidos/1
 ###
 
 
 
 ###
-# Get pedido by id (do cliente)
-GET http://localhost:3000/pedidos/3/7
+# Get pedido by id (do cliente e do pedido)
+GET http://localhost:3000/pedidos/1/5
 
 ###
 
