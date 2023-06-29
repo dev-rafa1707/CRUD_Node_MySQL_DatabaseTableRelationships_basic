@@ -63,7 +63,7 @@ GET http://localhost:3000/produtos
 
 
 # Get Produtos by Id
-GET http://localhost:3000/produtos/7
+GET http://localhost:3000/produtos/5
 
 
 ###
@@ -91,7 +91,7 @@ GET http://localhost:3000/pedidos
 #Recupera todos os pedidos do cliente indicado
 #Sistema está fazendo a busca do cliente e dos pedidos mas não retorna
 # fica 'waiting' 
-GET http://localhost:3000/pedidos/1
+GET http://localhost:3000/pedidos/3
 ###
 
 
@@ -105,12 +105,12 @@ GET http://localhost:3000/pedidos/3/7
 
 ###
 # Create pedido
-POST http://localhost:3000/pedidos/3
+POST http://localhost:3000/pedidos/5
 Content-Type: application/json
 
     {
-        "valor":0,
-        "produtosIds":[6]
+        "valor":100,
+        "produtosIds":[5]
     }
 
 ###
